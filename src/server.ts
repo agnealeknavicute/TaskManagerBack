@@ -21,7 +21,7 @@ const connectDB = async () => {
         dbName: "task-manager",
       }
     );
-    console.log("yes");
+    console.log("mongoDB");
   } catch (e) {
     console.log(e);
   }
@@ -29,6 +29,4 @@ const connectDB = async () => {
 
 connectDB();
 
-app.listen(3001, () => {
-  console.log("dads");
-});
+app.listen(3001, () => {});
