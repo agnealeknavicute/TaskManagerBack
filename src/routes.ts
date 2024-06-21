@@ -1,5 +1,6 @@
 import express, { Request, Response } from "express";
 import { Todo } from "./models/todoModel";
+import { signin, signup } from "./controlers/auth.controler";
 
 const router = express.Router();
 
@@ -49,5 +50,8 @@ router.post("/api/todo", async (req: Request, res: Response) => {
     console.log(e);
   }
 });
+
+router.post("/api/signup", signup);
+router.post("/api/signin", signin);
 
 export { router as todoRouter };
